@@ -2,28 +2,37 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.textviewdebug">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
     <supports-screens android:compatibleWidthLimitDp="2000" />
+
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:resizeable="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:resizeable="true"
-        android:hardwareAccelerated="true"
-        android:theme="@style/Theme.Textviewdebug">
+        android:theme="@style/Theme.Textviewdebug"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".TextLayout.TextViewTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TextLayout.TextLayoutActivity"
+            android:exported="true" />
         <activity
             android:name=".WebViewActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:resizeableActivity="true"
-            android:hardwareAccelerated="true"
             android:theme="@style/Theme.Textviewdebug.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,10 +49,13 @@
             <intent-filter>
                 <action android:name="myCallee" />
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/plain"
-                    android:path="/detail"/>
+
+                <data
+                    android:mimeType="text/plain"
+                    android:path="/detail" />
             </intent-filter>
         </activity>
     </application>

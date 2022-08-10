@@ -6,6 +6,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.textviewdebug.TextLayout.TextLayoutActivity;
+import com.example.textviewdebug.TextLayout.TextViewTestActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +28,8 @@ import com.example.textviewdebug.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -38,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private TextView tv_share;
     private Switch swc_isShare;
+    private Button btn_font;
+    private ImageButton btn_textViewTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +102,24 @@ public class MainActivity extends AppCompatActivity {
         });
         //
         Log.i("", System.currentTimeMillis() + "ms");
+        ///////////////////////////////////////////////////////////
+        //                   TextLayout                          //
+        ///////////////////////////////////////////////////////////
+        btn_font = findViewById(R.id.button_font);
+        btn_font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TextLayoutActivity.class));
+            }
+        });
+        //image button a-z Test TextView standard behavior
+        btn_textViewTest = findViewById(R.id.imageButton_az);
+        btn_textViewTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
+            }
+        });
     }
 
     @Override

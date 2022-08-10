@@ -11,4 +11,42 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_callee">CalleeActivity</string>
+    <!-- Strings used for TextLayoutActivity -->
+    <string name="text_view_sample1">脚卵说：“我父亲说过，‘寒门出高士’。据我\n父亲讲，我们祖上是元朝的倪云林。倪祖很有”\n\n
+        ----相临标点挤压（tip:向左挤压）</string>
+    <string name="text_view_sample2">PlaceHolder\n‘为棋不为生’，为棋是养性，生反而坏了\n性，所以生不可太盛。又说他从小没学过\n\n
+        ----行首标点挤压，让左侧整齐（tip:向左侧齐整）</string>
+    <string name="text_view_sample3">没有电，先用这个吧。”大家这才悟过来没\n有电灯，连忙感谢着支书，小心地将油放\n在一摞箱子上。李立找到钥匙，弯下腰去\n\n
+        ----相邻标点挤压（tip:挤压标点右侧空间）\n
+        会导致标点或者文字轧边\n
+        需要做行内标点挤压。</string>
+    <string name="text_view_sample4">我父亲讲，我爷爷在时，专雇一个老太\n婆，整天就是从燕窝里拔脏东西。\n
+        ----推出式避头尾\n
+        （逗号不能在行首tip:放上一行的行尾）</string>
+    <string name="text_view_sample5">我父亲讲，我爷爷在时，专雇一个老太婆，\n整天就是从燕窝里拔脏东西。\n
+        ----优先推入式标点挤压\n
+        （逗号放上一行行尾）</string>
+    <string name="text_view_sample6">钱包与MI pay\n钱包与 MI pay\n15GB  60kg\n15 GB  60 kg\n
+        ----中英文、数字和单位之间加空格</string>
+    <string name="text_view_sample7">1.这是一段中文文字a line of English\n
+        2.a line of 1024chars这段文字包含1024个字符.\n
+        3.附加一段英文与数字english1024\n
+        4.原有空格需要剔除 开启 MIUI 优化选项 1024 次数\n
+        5.----中英文、文本数字之间加空格(空隙)\n
+        6. 2022年8月22日\n
+        7. 双WLAN模式\n
+        8. L.G的RedMi K40</string>
+
+    <!-- Strings used for TextViewTestActivity -->
+    <string name="textview_test_placeholder">在这里Try 不同风格的字体样式吧!</string>
+    <string name="text_paragraph">
+\t\t\t\t[Tabx4]《战争与和平》是俄国作家列夫·尼古拉耶维奇·托尔斯泰创作的长篇小说，也是其代表作，创作于1863—1869年。
+该作以1812年的卫国战争为中心，反映从1805到1820年间的重大历史事件。以鲍尔康斯、别祖霍夫、罗斯托夫和库拉金四大贵族的经历为主线，在战争与和平的交替描写中把众多的事件和人物串联起来。 [1]
+作者将“战争”与“和平”的两种生活、两条线索交叉描写，构成一部百科全书式的壮阔史诗。 [2]  《战争与和平》的基本主题是肯定这次战争中俄国人民正义的抵抗行动，赞扬俄国人民在战争中表现出来的爱国热情和英雄主义。但作品的基调是宗教仁爱思想和人道主义，作家反对战争，对战争各方的受难并都给予了深切的同情。 [3]\n
+\n
+\t[测试Tab1]1805年，在拿破仑率兵征服欧洲之后，法国和俄国之间也发生了战争。可是在俄国上层社会，人们的生活依旧恬静悠闲，社交舞会照常举行。青年公爵安德烈·保尔康斯基把已有身孕的妻子交给退隐于领地“秃山”的父亲及妹妹玛丽娅之后，就担任库图佐夫将军的副官，向前线出发去了，他希望这次战争能为自己带来辉煌与荣耀。\n
+\n
+\t\t[测试Tab2]安德烈刚刚留学归来的好友皮埃尔·别祖霍夫，是莫斯科数一数二的资本家，是社交界的宠儿。居心叵测的监护人库拉金公爵看到这一点，便企图把美貌但品行不端的女儿爱伦嫁给他，结果计谋顺利达成，可这桩婚事实在不幸之至。同年11月，安德烈所属的俄军在奥斯特里茨之役战败。安德烈历尽种种艰难后回到秃山。当日夜晚，妻子莉沙正好产下一名男婴，但她却在分娩时死去了。安德烈陷入孤独和绝望中，他觉得自己的人生已告结束，便下定决心终老于领地。另一方面，婚后不久的皮埃尔发现妻子爱伦与好友多勃赫夫之间存在暧昧关系，为了保护自己的名声，他与多勃赫夫进行决斗。在幸运地击倒对方后，皮埃尔即与妻子分居，他也陷入了善恶和生死问题的困扰之中。不久，皮埃尔加入了共济会，得出了一套生活的哲学。他又怀着宽宏大量之心，接回了妻子。\n
+\n
+        ----选自 https://baike.baidu.com/item/%E6%88%98%E4%BA%89%E4%B8%8E%E5%92%8C%E5%B9%B3/9134429?fr=aladdin\n</string>
 </resources>
