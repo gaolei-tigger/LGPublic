@@ -28,14 +28,14 @@
         （逗号放上一行行尾）</string>
     <string name="text_view_sample6">钱包与MI pay\n钱包与 MI pay\n15GB  60kg\n15 GB  60 kg\n
         ----中英文、数字和单位之间加空格</string>
-    <string name="text_view_sample7">1.这是一段中文文字a line of English\n
+    <string name="text_view_sample7">1.这是一段中文文字,a line of english\n
         2.a line of 1024chars这段文字包含1024个字符.\n
         3.附加一段英文与数字english1024\n
         4.原有空格需要剔除 开启 MIUI 优化选项 1024 次数\n
         5.----中英文、文本数字之间加空格(空隙)\n
         6. 2022年8月22日\n
         7. 双WLAN模式\n
-        8. L.G的RedMi K40</string>
+        8. L.G的RedMi K40\n</string>
 
     <!-- Strings used for TextViewTestActivity -->
     <string name="textview_test_placeholder">在这里Try 不同风格的字体样式吧!</string>
