@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextLayout.TextLayoutActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:id="@+id/TR_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample1" />
+
+                                <Button
+                                    android:id="@+id/button_font1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font1)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font1_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample2" />
+
+                                <Button
+                                    android:id="@+id/button_font2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font2)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font2_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample3" />
+
+                                <Button
+                                    android:id="@+id/button_font3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font3)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font3_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample4" />
+
+                                <Button
+                                    android:id="@+id/button_font4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font4)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font4_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample5" />
+
+                                <Button
+                                    android:id="@+id/button_font5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font5)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font5_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample6" />
+
+                                <Button
+                                    android:id="@+id/button_font6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font6)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font6_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/TR_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_frame7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="396dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView_font7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/text_view_sample7" />
+
+                                <Button
+                                    android:id="@+id/button_font7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Button(Font7)" />
+
+                                <TextView
+                                    android:id="@+id/textView_font7_opt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#DBDCDF"
+                                    android:text="TextView" />
+
+                                <Space
+                                    android:id="@+id/space7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="12dp"
+                                    android:layout_weight="1"
+                                    android:background="#F29205"
+                                    android:backgroundTint="#08D6F1"
+                                    android:backgroundTintMode="add"
+                                    android:foregroundTint="#EF9106"
+                                    android:visibility="visible"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
