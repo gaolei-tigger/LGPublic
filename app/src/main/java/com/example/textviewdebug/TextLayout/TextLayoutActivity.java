@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
 public class TextLayoutActivity extends AppCompatActivity {
@@ -43,7 +45,7 @@ public class TextLayoutActivity extends AppCompatActivity {
                 CharSequence sample = tv_font_sample7.getText();
                 // doprocess
                 long t0 = System.currentTimeMillis();
-                CharSequence sample_opt1 = doSpaceOpt(sample);
+                //CharSequence sample_opt1 = doSpaceOpt(sample);
                 long t1 = System.currentTimeMillis();
                 CharSequence sample_opt = makeSpaceOpt(sample);
                 long t2 = System.currentTimeMillis();
@@ -61,29 +63,25 @@ public class TextLayoutActivity extends AppCompatActivity {
      */
     private String preSpaceOpt(CharSequence rawText) {
         String rawString = rawText.toString();
-        String[] results = rawString.split("[\\u4e00-\\u9fa5]{1}[\\s]{1}[A-Za-z0-9]{1}|[A-Za-z0-9]{1}[\\s]{1}[\\u4e00-\\u9fa5]{1}");
-        List<Pair<Integer,Integer>> indices = new ArrayList<>();
         List<Integer> spaceIndices = new ArrayList<>();
-        StringBuilder sBuilder = new StringBuilder().append(rawString);
         // Collect indices
-        for (int i=0; i < results.length; i+=2) { // process double end from LTR, skip second hit, care for end
-            if (results[i].isEmpty()) {
-                continue;
-            }
-            int index_left = rawString.indexOf(results[i]);
-            int index_right = index_left + results[i].length() -1;
-            indices.add(new Pair(index_left, index_right));
-            int space_left = index_left - 2;
-            int space_right = index_right + 2;
-            if (space_left > 0) {
-                // avoid head
-                spaceIndices.add(space_left);
-            }
-            if (space_right < rawString.length() - 1) {
-                // avoid tail
-                spaceIndices.add(space_right);
+        Pattern pat = Pattern.compile("[\\u4e00-\\u9fa5]{1}[\\s]{1}[A-Za-z0-9]{1}|[A-Za-z0-9]{1}[\\s]{1}[\\u4e00-\\u9fa5]{1}");
+        Matcher matcher = pat.matcher(rawString);
+        int slow = 0;
+        while (matcher.find()) {
+            int start = matcher.start();
+            int end = matcher.end();
+            spaceIndices.add(start + 1); // find
+            if (rawString.charAt(end) == ' ') { // maybe
+                slow++; //
+                if (preSpaceOptCheckBL(rawText, end)) {
+                    spaceIndices.add(end);
+                }
             }
         }
+        Log.d(TAG, "pre match of all matched:" + spaceIndices.size() + "while slow path:" + slow );
+        //
+        StringBuilder sBuilder = new StringBuilder().append(rawString);
         for (int i = spaceIndices.size() - 1; i >= 0; i--) { // remove the matched spaces by reverse order
             int spaceIndex = spaceIndices.get(i);
             if (sBuilder.charAt(spaceIndex) != ' ') { // double check
@@ -171,6 +169,31 @@ public class TextLayoutActivity extends AppCompatActivity {
                     targetIndex, targetIndex + 1,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         }
         return ssb;
+    }
+
+    private boolean preSpaceOptCheckBL(CharSequence rawText, int testIndex) {
+        if (testIndex == 0 || testIndex == rawText.length() - 1) { // do not consider head or last one
+            return false;
+        }
+        if (rawText.charAt(testIndex) != ' ') { // check be space
+            return false;
+        }
+        boolean hit = false;
+        IntStream left_char = rawText.codePoints();
+        int[] codePoints = left_char.toArray();
+        if (isInHansRange(codePoints[testIndex-1]) && isInAlphabet(codePoints[testIndex+1])) { // HANS-space-ENGLISH
+            hit = true;
+        }
+        if (isInAlphabet(codePoints[testIndex-1]) && isInHansRange(codePoints[testIndex+1])) { // ENGLISH-space-HANS
+            hit = true;
+        }
+        if (isInHansRange(codePoints[testIndex-1]) && Character.isDigit(codePoints[testIndex+1])) { // HANS-space-NUM
+            hit = true;
+        }
+        if (Character.isDigit(codePoints[testIndex-1]) && isInHansRange(codePoints[testIndex+1])) { // NUM-space-HANS
+            hit = true;
+        }
+        return hit;
     }
 
     //////////////////////////////////////////////////////////////////////
